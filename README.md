@@ -3,6 +3,8 @@
 ## Overview
 This script is designed to automate the process of triggering a search for the next episode(s) and optionally delete of a TV series in Sonarr when the current episode is being played in Plex. It's particularly useful for managing older shows where you don't want to download entire seasons upfront, thus saving space and ensuring a seamless viewing experience.
 
+*Added a script to feed an html site which is not for everyone and can be removed, see below
+
 ## Installation
 
 ### Clone the Repository
@@ -65,4 +67,13 @@ In your Plex server settings, set up a webhook pointing to the Flask endpoint. T
 
 Ensure to replace `/path/to/plextosonarr.py` with the actual path where your `plextosonarr.py` script is located on your system.
 
+* if you dont want to serv an html page via flask then edit web_hook_listener.py and remove
 
+  `import sonarr_utils`
+
+  `@app.route('/')
+def home():
+    preferences = sonarr_utils.load_preferences()  # Make sure to load preferences
+    series_data = sonarr_utils.fetch_series_and_episodes(preferences)
+    return render_template('index.html', series_data=series_data)
+  `
