@@ -3,7 +3,9 @@
 ## Overview
 This script is designed to automate the process of triggering a search for the next episode(s) and optionally delete of a TV series in Sonarr when the current episode is being played in Plex. It's particularly useful for managing older shows where you don't want to download entire seasons upfront, thus saving space and ensuring a seamless viewing experience.
 
-*Added a script to feed an html site which is not for everyone and can be removed, see below
+*Added a script to feed an html site which is not for everyone and can be removed, see bottom of readme
+
+![html](https://github.com/Vansmak/tidiarr/assets/16037573/d8248e93-8f8e-40d9-9e42-15b2173b7ee4)
 
 ## Installation
 
